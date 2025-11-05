@@ -1,0 +1,121 @@
+.applied-page {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9ff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.applied-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+/* Application Card */
+.application-card {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.application-card h3 {
+  color: #0f52ba;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.application-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.application-card b {
+  color: #222;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 1.2rem 0;
+}
+
+/* Status */
+.status {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.status-success {
+  color: #155724;
+  background-color: #d4edda;
+}
+
+.status-pending {
+  color: #856404;
+  background-color: #fff3cd;
+}
+
+.status-failed {
+  color: #721c24;
+  background-color: #f8d7da;
+}
+
+/* Buttons */
+.applied-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-home,
+.btn-campaigns {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-home {
+  background: #28a745;
+}
+
+.btn-home:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-campaigns {
+  background: #007bff;
+}
+
+.btn-campaigns:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}

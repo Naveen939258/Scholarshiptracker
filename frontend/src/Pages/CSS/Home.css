@@ -1,0 +1,313 @@
+/* ============================================================
+   🎓 Scholarship Tracker - Home Page Styles
+   Combined & Enhanced Version (Light + Dark Themes)
+   Author: Kakarla Naveen
+============================================================ */
+
+/* 🌐 Global Base Styles */
+.home {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #0f0c29, #0f172a, #24243e);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   🌟 HERO SECTION
+============================================================ */
+.hero {
+  position: relative;  /* ✅ important for scroll-section positioning */
+  background: linear-gradient(90deg, #c33764, #1d2671);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 80px; /* add bottom padding so it doesn’t overlap text */
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* 🎯 Hero Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 1rem;
+}
+
+/* Shared Button Styles */
+.btn-primary,
+.btn-secondary,
+.btn-volunteer {
+  min-width: 190px;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+/* 🔵 Primary Button */
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 6px 10px rgba(37, 99, 235, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-4px);
+}
+
+/* ⚪ Secondary Button */
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+}
+.btn-secondary:hover {
+  transform: translateY(-4px);
+}
+
+/* 🟢 Volunteer Button */
+.btn-volunteer {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(22, 163, 74, 0.4);
+}
+.btn-volunteer:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(253, 236, 2, 0.35);
+}
+
+/* ============================================================
+   📊 STATS SECTION
+============================================================ */
+.stats {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  border-radius: 20px;
+  margin: 50px auto;
+  color: #fff;
+  animation: statsBG 18s ease infinite;
+}
+
+@keyframes statsBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: linear-gradient(145deg, #fef9ef, #ffe8b0);
+  color: #1e1e1e;
+  border-radius: 14px;
+  padding: 28px 20px;
+  box-shadow: 0 6px 18px rgba(255, 215, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgb(255, 217, 0);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b8860b;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ============================================================
+   💡 FEATURES SECTION
+============================================================ */
+.features {
+  padding: 80px 20px;
+  text-align: center;
+  background: #1c1c3c;
+}
+
+.features h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #ffeb3b;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(253, 236, 2, 0.35);
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #ffeb3b;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* ============================================================
+   🚀 CALL TO ACTION SECTION
+============================================================ */
+.cta {
+  background: linear-gradient(90deg, #c33764, #1d2671);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffeb3b;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* ============================================================
+   📱 RESPONSIVE DESIGN
+============================================================ */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .features h2,
+  .cta h2 {
+    font-size: 1.8rem;
+  }
+  .btn-primary,
+  .btn-secondary,
+  .btn-volunteer {
+    min-width: 100%;
+  }
+}
+/* 📰 Scrolling Updates — now part of Hero */
+.scroll-section {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;  /* ✅ make it stick to bottom */
+  bottom: 0;           /* ✅ anchor it to the bottom */
+  left: 0;
+  background: linear-gradient(90deg, #c33764, #1d2671);
+  padding: 10px 0;
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  box-shadow: inset 0 0 18px rgba(0, 255, 255, 0.2);
+  border-top: 1px solid rgba(0, 255, 255, 0.25);
+  z-index: 3;
+}
+
+.scroll-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 22s linear infinite;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #00ffff;
+  letter-spacing: 0.4px;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+}
+
+.scroll-content span {
+  margin: 0 40px;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+.scroll-section:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Subtle glowing pulse */
+.scroll-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), transparent 70%);
+  animation: glowPulse 6s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}

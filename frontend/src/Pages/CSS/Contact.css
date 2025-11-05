@@ -1,0 +1,121 @@
+.contact-page {
+  min-height: 100vh; /* Full viewport height */
+  padding: 50px 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  color: #f8fafc;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title & Subtitle */
+.contact-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #e2e8f0;
+}
+
+.contact-subtitle {
+  color: #cbd5e1;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* Tabs */
+.contact-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-tabs button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.contact-tabs button:hover {
+  color: #60a5fa;
+}
+
+.contact-tabs button.active {
+  color: #3b82f6;
+  border-bottom: 3px solid #3b82f6;
+  font-weight: 600;
+}
+
+/* Content Box */
+.contact-content {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.contact-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 25px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+  color: #f1f5f9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contact-box h3 {
+  color: #f8fafc;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.contact-box p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.contact-box a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+/* Note */
+.contact-note {
+  font-size: 14px;
+  color: #0df705;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Button (optional future) */
+.btn-primary {
+  background: #3b82f6;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+.office-map {
+  margin-top: 15px;
+  border-radius: 10px;
+}

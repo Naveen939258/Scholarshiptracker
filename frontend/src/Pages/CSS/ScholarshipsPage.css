@@ -1,0 +1,509 @@
+/* ============================
+   🎓 Scholarships Portal Styles
+============================ */
+.scholarship-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #16213e, #1a1a2e);
+  color: #f8fafc;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 20px;
+}
+
+/* 🌟 Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 0.6s ease;
+}
+
+.header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffeb3b;
+}
+
+.header p {
+  color: #cbd5e1;
+  margin-top: 8px;
+}
+
+/* 📊 Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  padding: 20px 25px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  min-width: 180px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.stat-card p {
+  color: #ffeb3b;
+  margin-top: 5px;
+}
+
+.stat-card.blue { border-left: 5px solid #3b82f6; }
+.stat-card.green { border-left: 5px solid #10b981; }
+.stat-card.yellow { border-left: 5px solid #facc15; }
+
+/* 🔍 Filters */
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  flex-wrap: nowrap; /* keep everything on the same line */
+  width: 100%;
+}
+
+.filters input{
+  padding: 1px 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  height: 32px;
+  background-color: #4c4c86;
+  color: #fff;
+}
+.filters select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  height: 32px;
+  background-color: #4c4c86;
+  color: #fff;
+}
+
+.btn-primary1 {
+  background: linear-gradient(90deg, #00ffcc, #00bcd4);
+  color: #0f172a;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: auto; /* prevent full-width stretching */
+  min-width: fit-content; /* keeps it compact */
+}
+
+.btn-primary1:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+  
+
+
+.filters input::placeholder {
+  color: #0a0a0a;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00ffcc, #00bcd4);
+  color: #0f172a;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+
+/* 🧾 Scholarship Cards */
+.scholarships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* 🌟 Card Container */
+.scholarship-card {
+  background: #0f172a; /* deeper navy for contrast */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 255, 204, 0.3);
+}
+
+/* 🧠 Gradient Header */
+.scholarship-card h3 {
+  background: linear-gradient(90deg, #00ffcc, #00bcd4);
+  color: #0f172a;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 10px;
+  margin: 0;
+  border-radius: 16px 16px 0 0;
+}
+
+/* 💬 Card Content */
+.scholarship-card p {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  margin: 6px 0;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+.scholarship-card b {
+  color: #00ffcc;
+  font-weight: 600;
+}
+
+/* 🔹 Add subtle separator line */
+.scholarship-card hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 20px;
+}
+.no-data {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #94a3b8;
+  padding: 40px 0;
+}
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+.card-buttons button {
+  flex: 1;
+  min-width: 90px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-remind {
+  background: linear-gradient(90deg, #ff9800, #ff758c);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ⚖️ Compare Section */
+.compare-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.compare-section h2 {
+  color: #ffeb3b;
+  margin-bottom: 20px;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.compare-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.compare-card h3 {
+  color: #00ffcc;
+  margin-bottom: 8px;
+}
+
+/* 🧾 Modal Styles */
+/* ✅ Properly Centered Modal Below Navbar */
+.modal {
+  position: fixed;
+  top: 60px; /* below navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: rgba(15, 23, 42, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  z-index: 9999;
+  padding: 30px 0;
+}
+.apply-modal {
+  background: #16213e;
+  border-radius: 16px;
+  padding: 25px 30px;
+  width: 90%;
+  max-width: 700px;
+  color: #f8fafc;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
+  animation: slideUp 0.4s ease;
+  overflow-y: auto;
+  max-height: 85vh; /* prevents overlapping taskbar */
+}
+.apply-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.apply-modal .modal-header h2 {
+  color: #00ffcc;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ✅ Close Button — no blue hover, right corner aligned */
+.apply-modal .modal-header button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.apply-modal .modal-header button:hover {
+  color: #00ffcc;
+}
+.apply-modal .modal-body {
+  overflow-y: auto;
+  max-height: calc(85vh - 120px);
+  padding-right: 8px;
+}
+
+.modal-content {
+  margin-top: 20px;
+  background: #16213e;
+  padding: 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px; /* more width for large forms */
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+
+.modal-content h2 {
+  color: #ffeb3b;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  color: #e2e8f0;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.full {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* 🗂️ Applied Section */
+.applied-section {
+  margin-top: 60px;
+}
+
+.applied-section h2 {
+  color: #ffeb3b;
+  margin-bottom: 20px;
+}
+
+.applied-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.applied-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.applied-card h3 {
+  color: #00ffcc;
+  margin-bottom: 8px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.badge.blue {
+  background: #00ffcc;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🧩 Responsive */
+@media (max-width: 768px) {
+  .card-buttons {
+    flex-direction: column;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.apply-form h3 {
+  margin-top: 15px;
+  color: #e0dbdb;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.apply-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.apply-form .note {
+  font-size: 0.85rem;
+  color: #ececec;
+  margin-bottom: 8px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+/* ✅ Scrollable Apply Modal */
+.apply-modal {
+  max-height: 90vh; /* prevents it from going beyond viewport */
+  overflow-y: auto; /* allows vertical scrolling */
+  scrollbar-width: thin;
+  scrollbar-color: #00ffcc #16213e;
+}
+
+/* Optional — make scrollbar look nice */
+.apply-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.apply-modal::-webkit-scrollbar-thumb {
+  background: #00ffcc;
+  border-radius: 6px;
+}
+
+.apply-modal::-webkit-scrollbar-track {
+  background: #16213e;
+}
+.modal-actions {
+  text-align: right;
+  margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+  background: #16213e;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

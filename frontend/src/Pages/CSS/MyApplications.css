@@ -1,0 +1,675 @@
+/* ==============================
+   💫 My Applications – Premium UI
+   Inspired by Scholarship Portal Theme
+============================== */
+
+.apps-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #16213e, #1a1a2e);
+  color: #f8fafc;
+  font-family: "Poppins", sans-serif;
+  padding: 30px 50px;
+  animation: fadeIn 0.8s ease;
+}
+
+/* 🌟 Header Section */
+.apps-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.apps-top h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffeb3b;
+  text-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+}
+
+.apps-top p {
+  color: #cbd5e1;
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* 🗂️ Empty State */
+.empty-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  color: #e2e8f0;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.15);
+}
+
+.empty-box a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.empty-box a:hover {
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+/* 📋 Applications Grid */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+/* ✨ Application Card */
+.app-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 255, 204, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 255, 204, 0.3);
+}
+
+/* 🧾 Card Content */
+.app-left h3 {
+  color: #00ffcc;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.app-left p {
+  color: #d1d5db;
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.app-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.7rem;
+}
+
+/* 🎯 Status Badge */
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+/* Status Colors with Glow */
+.status-submitted {
+  background: rgba(0, 123, 255, 0.15);
+  color: #02e1ff;
+  border: 1px solid #00bcd4;
+  text-shadow: 0 0 6px #00bcd4;
+}
+
+.status-review {
+  background: rgba(255, 193, 7, 0.15);
+  color: #facc15;
+  border: 1px solid #facc15;
+  text-shadow: 0 0 6px #facc15;
+}
+
+.status-approved {
+  background: rgba(16, 185, 129, 0.15);
+  color: #00ffcc;
+  border: 1px solid #00ffcc;
+  text-shadow: 0 0 6px #00ffcc;
+}
+
+.status-rejected {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  text-shadow: 0 0 6px #ff4d4d;
+}
+
+.status-withdrawn {
+  background: rgba(156, 163, 175, 0.15);
+  color: #a1a1aa;
+  border: 1px solid #a1a1aa;
+}
+
+/* 🔘 Buttons */
+
+/* ==============================
+   🎨 Compact Action Buttons (Matches Scholarship Page)
+============================== */
+
+.app-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.app-actions button {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 85px;
+}
+
+/* 🟢 View Button */
+.app-actions .btn-outline {
+  background: linear-gradient(90deg, #00ffcc, #00bcd4);
+  color: #0f172a;
+  border: none;
+}
+.app-actions .btn-outline:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+/* 🔴 Withdraw Button */
+.app-actions .btn-danger {
+  background: linear-gradient(90deg, #ff4d4d, #ff758c);
+  color: #fff;
+}
+.app-actions .btn-danger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 99, 132, 0.8);
+}
+
+/* 🧾 Receipt Button */
+.app-actions .btn-primary {
+  background: linear-gradient(90deg, #00ffcc, #00bcd4);
+  color: #0f172a;
+}
+.app-actions .btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+
+/* 💬 Modal */
+/* 💬 Modal (Perfect Single Scroll Fix) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden; /* prevent body scroll */
+  padding: 0 15px;
+}
+
+.modal-content {
+  background: #16213e;
+  border-radius: 16px;
+  padding: 25px 30px;
+  width: 90%;
+  max-width: 850px;
+  color: #f8fafc;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
+  animation: slideUp 0.4s ease;
+  max-height: 90vh;
+  overflow-y: auto; /* ✅ only this scrolls */
+  scrollbar-width: thin;
+  scrollbar-color: #00ffcc #0f172a;
+}
+
+/* ✅ Hide body scroll when modal open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* ✅ Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-header h2 {
+  color: #00ffcc;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ✅ Close button */
+.close1 {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: 0.2s ease;
+}
+
+.close1:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 6px #00ffcc;
+}
+
+/* ✅ Scrollbar styling */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #00ffcc;
+  border-radius: 3px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+/* ✅ Body content */
+.modal-body {
+  padding-right: 6px;
+}
+
+.modal-actions {
+  text-align: right;
+  margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+  background: #16213e;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-body h4 {
+  color: #ffeb3b;
+  margin-bottom: 0.4rem;
+}
+
+.modal-body p {
+  color: #cbd5e1;
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.docs-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.docs-list li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.docs-list a {
+  color: #00ffcc;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.docs-list a:hover {
+  text-decoration: underline;
+}
+
+.status-label {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.modal-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* ⚡ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .apps-page {
+    padding: 15px;
+  }
+
+  .app-card {
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .app-right {
+    align-items: flex-start;
+  }
+
+  .app-actions {
+    flex-wrap: wrap;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}
+.applications-section {
+  background: linear-gradient(145deg, rgba(15,23,42,0.9), rgba(30,41,59,0.85));
+  border-radius: 24px;
+  padding: 40px 35px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.4s ease;
+}
+.applications-section h2 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #00ffcc, #00bcd4, #4ade80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+.application-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  margin-bottom: 22px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+.application-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 18px 0 0 18px;
+  background: linear-gradient(180deg, #00ffcc, #00bcd4);
+}
+.application-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 36px rgba(0,255,204,0.25);
+}
+.status-tag {
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+.status-tag.approved {
+  background: rgba(16,185,129,0.2);
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  box-shadow: 0 0 10px rgba(0,255,204,0.5);
+}
+.status-tag.rejected {
+  background: rgba(239,68,68,0.2);
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255,77,77,0.5);
+}
+.status-tag.pending {
+  background: rgba(250,204,21,0.2);
+  border: 1px solid #facc15;
+  color: #facc15;
+  box-shadow: 0 0 10px rgba(250,204,21,0.4);
+}
+.application-details h3 {
+  font-size: 1.4rem;
+  color: #00ffcc;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.application-details p {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+.application-details b {
+  color: #94a3b8;
+  font-weight: 500;
+}
+/* ==============================
+   🚀 Amazon-style Timeline (Dark Glass Theme)
+============================== */
+
+.timeline-section.outside {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 25px rgba(0, 255, 204, 0.08);
+  color: #f8fafc;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.timeline-section.outside h4 {
+  font-size: 1.1rem;
+  color: #00ffcc;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-section.outside h4::before {
+  content: "📜";
+  font-size: 1.2rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, #00ffcc, #00bcd4, transparent);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  animation: slideIn 0.4s ease;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-top: 4px;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px currentColor;
+}
+
+.timeline-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 255, 204, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(3px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+}
+
+.timeline-content h5 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #00ffcc;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  margin: 4px 0;
+  color: #d1d5db;
+  font-size: 0.85rem;
+}
+
+.timeline-date {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* 🌈 Status Dot Colors */
+.timeline-dot.status-approved {
+  background: #00ffcc;
+  color: #00ffcc;
+}
+
+.timeline-dot.status-rejected {
+  background: #ff4d4d;
+  color: #ff4d4d;
+}
+
+.timeline-dot.status-review {
+  background: #facc15;
+  color: #facc15;
+}
+
+.timeline-dot.status-submitted {
+  background: #3b82f6;
+  color: #3b82f6;
+}
+
+.timeline-dot.status-withdrawn {
+  background: #9ca3af;
+  color: #9ca3af;
+}
+
+/* ✨ Subtle Motion */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* 🌌 Full Timeline Modal */
+.timeline-modal-body {
+  padding: 10px 20px;
+}
+
+.timeline-modal-body .timeline {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-modal-body .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, #00ffcc, #00bcd4, transparent);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.timeline-modal-body .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+.timeline-modal-body .timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.timeline-modal-body .timeline-content {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 18px;
+  border-radius: 12px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.timeline-modal-body .timeline-content:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+.timeline-modal-body .timeline-content h5 {
+  color: #00ffcc;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.timeline-modal-body .timeline-content p {
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+.timeline-modal-body .timeline-date {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
