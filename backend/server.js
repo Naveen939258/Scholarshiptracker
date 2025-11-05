@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = "mongodb+srv://Naveen:Naveen123@cluster0.2smgs0k.mongodb.net/ScholarShip";
+const MONGO_URI =process.env.MONGO_URI;
 const JWT_SECRET = process.env.JWT_SECRET;
 
 mongoose
@@ -485,7 +485,7 @@ app.post(
         ifsc,
         documents,
         timeline: [
-    { status: "Submitted", message: "Application submitted by user" },
+    { status: "Submitted", message: "Application submitted by you" },
   ],
       });
 
