@@ -5,7 +5,7 @@ import { faBell } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import "./Navbar.css";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_URL || "https://scholarshiptracker.onrender.com";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));

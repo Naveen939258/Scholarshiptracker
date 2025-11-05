@@ -3,7 +3,7 @@ import axios from "axios";
 import { jsPDF } from "jspdf";
 import "./CSS/MyApplications.css";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_URL || "https://scholarshiptracker.onrender.com";
 
 export default function MyApplications() {
   const [apps, setApps] = useState([]);
@@ -27,6 +27,7 @@ export default function MyApplications() {
 
   useEffect(() => {
     fetchApps();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchApps = async () => {

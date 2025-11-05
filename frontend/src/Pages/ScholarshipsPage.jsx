@@ -29,7 +29,7 @@ const token = localStorage.getItem("token");
  useEffect(() => {
   const fetchAllData = async () => {
     try {
-      const userRes = await axios.get("http://localhost:5000/auth/me", {
+      const userRes = await axios.get("https://scholarshiptracker.onrender.com/auth/me", {
         headers: { "auth-token": token },
       });
       setUser({
@@ -40,10 +40,10 @@ const token = localStorage.getItem("token");
 
       // ✅ Wait for both scholarships and applied list
       const [scholarRes, appliedRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/scholarships", {
+        axios.get("https://scholarshiptracker.onrender.com/api/scholarships", {
           headers: { "auth-token": token },
         }),
-        axios.get("http://localhost:5000/api/applications/my", {
+        axios.get("https://scholarshiptracker.onrender.com/api/applications/my", {
           headers: { "auth-token": token },
         }),
       ]);
@@ -87,10 +87,8 @@ const token = localStorage.getItem("token");
   };
 
   fetchAllData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [focusId]);
-
-
-
 
   // 🔹 Update stats
   const updateStats = (list, appliedList = applied) => {
@@ -141,8 +139,8 @@ const token = localStorage.getItem("token");
     const formData = new FormData(e.target);
     formData.append("scholarshipId", selectedScholarship.id);
 
-    const res = await axios.post(
-      "http://localhost:5000/api/applications/apply",
+     await axios.post(
+      "https://scholarshiptracker.onrender.com/api/applications/apply",
       formData,
       { headers: { "auth-token": token } }
     );

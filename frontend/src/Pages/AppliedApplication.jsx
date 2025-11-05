@@ -9,7 +9,7 @@ const AppliedApplication = () => {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/applications/my", {
+        const res = await axios.get("https://scholarshiptracker.onrender.com/api/applications/my", {
           headers: { "auth-token": token },
         });
         const data = res.data || [];

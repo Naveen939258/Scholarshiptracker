@@ -14,7 +14,7 @@ const Profile = () => {
   // Fetch user profile
   const fetchProfile = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:5000/auth/me", {
+      const res = await axios.get("https://scholarshiptracker.onrender.com/auth/me", {
         headers: { "auth-token": token },
       });
       setUser(res.data);
@@ -62,7 +62,7 @@ const Profile = () => {
         data.append("profileImage", profileImage);
       }
 
-      const res = await axios.put("http://localhost:5000/auth/me", data, {
+      const res = await axios.put("https://scholarshiptracker.onrender.com/auth/me", data, {
         headers: {
           "auth-token": token,
           "Content-Type": "multipart/form-data",

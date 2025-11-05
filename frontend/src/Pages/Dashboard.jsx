@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./CSS/Dashboard.css";
-import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_URL || "https://scholarshiptracker.onrender.com";
 
 const Dashboard = () => {
   const [user, setUser] = useState({ name: "Guest", email: "" });
   const [applications, setApplications] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [scholarships, setScholarships] = useState([]);
   const [stats, setStats] = useState({
     totalScholarships: 0,
@@ -17,7 +17,6 @@ const Dashboard = () => {
     rejectedCount: 0,
   });
   const [recommendations, setRecommendations] = useState([]);
-const location = useLocation();
 const navigate = useNavigate();
 
   useEffect(() => {
@@ -208,7 +207,7 @@ const fetchRecommendations = async () => {
         ) : (
           applications.map((app) => (
             <div key={app._id} className="application-box">
-              <div className={`status-tag ${app.status.toLowerCase()}`}>
+              <div className={`status-tag1 ${app.status.toLowerCase()}`}>
                 {app.status}
               </div>
               <div className="application-details">
