@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "../CSS/AdminScholarships.css";
 
@@ -27,7 +27,7 @@ const AdminScholarships = () => {
   const token = localStorage.getItem("token");
 
   // Fetch scholarships
-  const fetchScholarships = async () => {
+  const fetchScholarships = useCallback(async () => {
     try {
       const res = await axios.get("https://scholarshiptracker.onrender.com/api/admin/scholarships", {
         headers: { "auth-token": token },
@@ -48,11 +48,11 @@ const AdminScholarships = () => {
       console.error("❌ Failed to fetch scholarships:", err);
       alert("Failed to fetch scholarships!");
     }
-  };
+  },[token]);
 
   useEffect(() => {
     fetchScholarships();
-  }, []);
+  }, [fetchScholarships]);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 

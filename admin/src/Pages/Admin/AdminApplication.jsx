@@ -27,24 +27,26 @@ export default function AdminApplication() {
 
   const COLORS = ["#1976d2", "#f57c00", "#388e3c", "#d32f2f", "#607d8b"];
 
+  
+
+const fetchApplications = React.useCallback(async () => {
+  setLoading(true);
+  try {
+    const res = await axios.get(`${API_BASE}/api/admin/applications`, {
+      headers: { "auth-token": token },
+    });
+    setApplications(res.data || []);
+    setFilteredApps(res.data || []);
+  } catch (err) {
+    console.error("❌ Failed to fetch applications:", err);
+  } finally {
+    setLoading(false);
+  }
+}, [token]); // ✅ add dependencies here
+
   useEffect(() => {
     fetchApplications();
-  }, []);
-
-  const fetchApplications = async () => {
-    setLoading(true);
-    try {
-      const res = await axios.get(`${API_BASE}/api/admin/applications`, {
-        headers: { "auth-token": token },
-      });
-      setApplications(res.data || []);
-      setFilteredApps(res.data || []);
-    } catch (err) {
-      console.error("❌ Failed to fetch applications:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  }, [fetchApplications]);
 
   // 🔹 Compute stats
   const getStatusCounts = () => {
